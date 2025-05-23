@@ -1,0 +1,40 @@
+.user-form-card {
+  margin-bottom: 20px;
+  max-width: 500px; // Or your preferred max-width
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Adds space between form fields
+}
+
+.user-table-container {
+  margin-top: 20px;
+}
+
+.user-table {
+  width: 100%;
+}
+
+// Adjust column widths if necessary
+.mat-column-id {
+  width: 50px; // Example fixed width for ID
+  flex: 0 0 50px !important; // Ensure it's not overridden by flex
+}
+
+.mat-column-name,
+.mat-column-email {
+  // Allow these to take up remaining space, or set specific flex properties
+}
+
+.mat-column-permissions {
+  // Potentially wider if many permissions can be listed
+}
+
+// Style for the no data row
+.mat-row .mat-cell.mat-no-data-row {
+  text-align: center;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.54); // Standard Material text color for hints
+}

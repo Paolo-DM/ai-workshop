@@ -1,0 +1,27 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between; // Ensure title and links are spaced out
+}
+
+.spacer {
+  flex: 1 1 auto; // Pushes items to the right of "User Hub"
+}
+
+.container {
+  padding: 20px;
+}
+
+// Basic styling for active router links (optional, but good UX)
+a.mat-button.active-link { // More specific selector if needed
+  // Example: background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold; // Make it stand out
+}
+
+// Ensure routerLinkActive works correctly with mat-button
+// by targeting the inner span or the button itself if the class is applied there.
+// If routerLinkActive is on the <a> tag, and a mat-button is inside,
+// you might need to style based on the parent <a>.
+// For direct routerLinkActive on mat-button:
+// .mat-button.active-link {
+//   background-color: #e0e0e0; /* Example highlight */
+// }

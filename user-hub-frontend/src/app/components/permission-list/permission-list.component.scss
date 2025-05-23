@@ -1,0 +1,35 @@
+.permission-form-card {
+  margin-bottom: 20px;
+  max-width: 500px; // Or your preferred max-width
+}
+
+.permission-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Adds space between form fields
+}
+
+.permission-table-container {
+  margin-top: 20px;
+}
+
+.permission-table {
+  width: 100%;
+}
+
+// Adjust column widths if necessary
+.mat-column-id {
+  width: 50px; // Example fixed width for ID
+  flex: 0 0 50px !important; // Ensure it's not overridden by flex
+}
+
+.mat-column-name {
+  // Allow this to take up remaining space, or set specific flex properties
+}
+
+// Style for the no data row
+.mat-row .mat-cell.mat-no-data-row {
+  text-align: center;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.54); // Standard Material text color for hints
+}

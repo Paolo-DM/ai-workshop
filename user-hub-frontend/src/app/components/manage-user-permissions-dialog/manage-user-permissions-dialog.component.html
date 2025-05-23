@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Manage Permissions for {{ data.user.name }}</h2>
+
+<mat-dialog-content class="dialog-content">
+  <div *ngIf="isLoadingPermissions" class="spinner-container">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Loading permissions...</p>
+  </div>
+
+  <div *ngIf="!isLoadingPermissions">
+    <div *ngIf="isLoading" class="checkbox-spinner-overlay">
+      <mat-spinner diameter="30"></mat-spinner>
+    </div>
+    <mat-list>
+      <mat-list-item *ngFor="let permission of allPermissions">
+        <mat-checkbox
+          [checked]="isPermissionAssigned(permission)"
+          (change)="onPermissionChange($event, permission)"
+          [disabled]="isLoading"
+          class="permission-checkbox">
+          {{ permission.name }}
+        </mat-checkbox>
+      </mat-list-item>
+      <p *ngIf="allPermissions.length === 0 && !isLoadingPermissions">No permissions available.</p>
+    </mat-list>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="primary" (click)="onDoneClick()">Done</button>
+</mat-dialog-actions>
