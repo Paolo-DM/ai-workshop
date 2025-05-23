@@ -1,0 +1,42 @@
+.dialog-content {
+  position: relative; // For positioning the spinner overlay
+  min-height: 150px; // Ensure there's some space for spinner if content is short
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.checkbox-spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); // Semi-transparent white overlay
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; // Ensure it's above the checkboxes
+}
+
+.permission-checkbox {
+  width: 100%; // Make checkbox take full width of list item for easier clicking
+}
+
+mat-list-item {
+  // Ensure list items are tall enough for checkboxes
+  height: auto !important; // Override default height if needed
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+// Ensure dialog actions are right-aligned
+mat-dialog-actions {
+  justify-content: flex-end;
+}
